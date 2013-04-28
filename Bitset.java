@@ -356,6 +356,18 @@ class Bitset
         return count;
     }
 
+    public boolean isSubset(Bitset b)
+    {
+        for (int i = 0; i < maxSize; i++)
+        {
+            if (member(i) && (!b.member(i)))
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
     /**
      *  A method to print a custom error message to the user, then exit
      *
