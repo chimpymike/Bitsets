@@ -17,6 +17,8 @@ public class TestSets
      System.out.print ("Type 3 to CREATE INTERSECTION (A * B)\n");
      System.out.print ("Type 4 to CREATE UNION (A + B)\n");
      System.out.print ("Type 5 to CREATE DIFFERENCE (A - B)\n");
+     System.out.print ("Type 6 to GET THE CARDINALITY OF SET A\n");
+     System.out.print ("Type 7 to GET THE CARDINALITY OF SET B\n");
      System.out.print ("Type any OTHER # to EXIT PROGRAM \n\n");
      System.out.print ("Command: ");
   }
@@ -63,9 +65,19 @@ public class TestSets
               System.out.print (setA.difference(setB));
               break;
 
+            case 6:
+              System.out.print ("     Cardinality SET A = " );
+              System.out.print (setA.cardinality());
+              break;
+
+            case 7:
+              System.out.print ("     Cardinality SET B = ");
+              System.out.print (setB.cardinality());
+              break;
+
            default:  System.exit(0);
         
          }
-       } while (command > 0 && command < 6);
+       } while (command > 0 && command < 8);
   }
 }
