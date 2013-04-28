@@ -346,6 +346,16 @@ class Bitset
        return str + "}";
     }
 
+    public int cardinality()
+    {
+        int count = 0;
+        for (int i = 0; i < maxSize; i++)
+        {
+            if (member(i)) count++;
+        }
+        return count;
+    }
+
     /**
      *  A method to print a custom error message to the user, then exit
      *
