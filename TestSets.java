@@ -19,6 +19,8 @@ public class TestSets
      System.out.print ("Type 5 to CREATE DIFFERENCE (A - B)\n");
      System.out.print ("Type 6 to GET THE CARDINALITY OF SET A\n");
      System.out.print ("Type 7 to GET THE CARDINALITY OF SET B\n");
+     System.out.print ("Type 8 to CHECK IF SET A IS A SUBSET OF SET B\n");
+     System.out.print ("Type 9 to CHECK IF SET B IS A SUBSET OF SET A\n");
      System.out.print ("Type any OTHER # to EXIT PROGRAM \n\n");
      System.out.print ("Command: ");
   }
@@ -75,9 +77,19 @@ public class TestSets
               System.out.print (setB.cardinality());
               break;
 
+            case 8:
+              System.out.print ("     SET A subset of SET B: ");
+              System.out.print (setA.isSubset(setB));
+              break;
+
+            case 9:
+              System.out.print ("     SET B subset of SET A: ");
+              System.out.print (setB.isSubset(setA));
+              break;
+
            default:  System.exit(0);
         
          }
-       } while (command > 0 && command < 8);
+       } while (command > 0 && command < 10);
   }
 }
